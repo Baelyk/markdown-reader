@@ -1,0 +1,83 @@
+body {
+    font-family: helvetica, sans-serif;
+    background-color: #eff2f2;
+    overflow-y: hidden;
+}
+
+.header {
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+    width: 97%;
+    border-radius: 0 0 10pt 10pt;
+    padding: 0 1.5% 10pt 1.5%;
+}
+
+.title-paste {
+    position: absolute;
+    top: 20px;
+}
+
+.subtitle {
+    font-family: menlo, monospace;
+    /*color: #ff7072;*/
+}
+
+.done-btn {
+    position: absolute;
+    top: 32px;
+    right: 1.5%;
+
+    background-color: #0080ff;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+}
+
+.done-btn:hover {
+    background-color: #0c69d5;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+}
+
+.done-btn:active {
+    background-color: #0953a9;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+}
+
+.edit {
+    position: absolute;
+    top: 115px;
+    left: 0px;
+    text-align: center;
+    margin: 0;
+    height: calc(100% - 115px);
+    width: 100%;
+}
+
+.edit-area {
+    width: 97%; /*780px*/
+    height: calc(97% - 10px);
+
+    padding: 10px 1.5% 1.5% 1.5%;
+
+    background-color: #eff2f2;
+    /*border-radius: 5pt;*/
+    border: none;
+
+    font-family: menlo, monospace;
+    font-size: 11pt;
+
+    resize: none;
+}

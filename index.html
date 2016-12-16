@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <h2>Markdown Reader</h2>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
-
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <title>Markdown Reader</title>
+    </head>
+    <body>
+        <div class="header" id="header">
+            <h1>Markdown Reader</h1>
+            <p class="subtitle">A markdown file viewer. Made with <a href="https://github.com/markdown-it/markdown-it">markdown-it</a>.</p>
+        </div>
+    </body>
+    <script type="text/javascript">
+        require('./renderer.js')
+    </script>
 </html>

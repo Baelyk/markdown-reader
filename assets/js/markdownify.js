@@ -25,15 +25,16 @@ var MarkdownIt = require('markdown-it')()
     .use(FontAwesome)
     .use(Attrs)
     .use(MathIt);
-// var md = new MarkdownIt();
-var output; // = md.render("# hi");
 
-process.argv.forEach(function (val, index, array) {
-    if(index == 2) {
-        output = MarkdownIt.render(val);
-    }
-});
+// var md = new MarkdownIt();
+// var output; // = md.render("# hi");
+//
+// process.argv.forEach(function (val, index, array) {
+//     if(index == 2) {
+//         output = MarkdownIt.render(val);
+//     }
+// });
 
 // output = MarkdownIt.render("$1 *2* 3$");
 
-console.log(output);
+// console.log(output);

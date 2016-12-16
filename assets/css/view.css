@@ -1,0 +1,123 @@
+.page {
+    font-family: helvetica, sans-serif;
+    font-size: 16pt;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: link;
+}
+
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5pt;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.select-page {
+    text-align: center;
+}
+
+.paste-page {
+    text-align: center;
+}
+
+.paste-page-area {
+    overflow: hidden;
+    width: 600px;
+    height: 250px;
+
+    padding: 10pt;
+
+    background-color: #eff2f2;
+    border-radius: 5pt;
+    border: none;
+
+    font-size: 12pt;
+}
+
+.select-page-btn {
+    background-color: #0080ff;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.select-page-btn:hover {
+    background-color: #0c69d5;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.select-page-btn:active {
+    background-color: #0953a9;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.paste-page-btn {
+    background-color: #a4cdff;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.paste-page-btn-enable {
+    background-color: #0080ff;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.paste-page-btn-enable:hover {
+    background-color: #0c69d5;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.paste-page-btn-enable:active {
+    background-color: #0953a9;
+    border-radius: 4pt;
+    border: none;
+    font-size: 16pt;
+    color: white;
+    padding: 10pt;
+}
+
+.file-title {
+    display: none;
+}

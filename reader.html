@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="assets/css/view.css">
+        <title>Markdown Reader</title>
+    </head>
+    <body>
+        <span class="file-title" id="file-title"></span>
+        <div class="page" id="page">
+            <h2>Select a page or paste content to be viewed</h2>
+            <div class="select-page" id="select-page">
+                <button type="button" class="select-page-btn" id="select-page-btn">Select Page</button>
+            </div>
+            <hr />
+            <div class="paste-page" id="paste-page">
+                <textarea class="paste-page-area filler" id="paste-page-area" name="paste-page-area" rows="8" cols="80" placeholder="Paste content here to be displayed"></textarea>
+                <br /> <br />
+                <button type="button" class="paste-page-btn" id="paste-page-btn" disabled>Display paste content</button>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        require('./read.js')
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            displayAlign: "left",
+        });
+    </script>
+</html>

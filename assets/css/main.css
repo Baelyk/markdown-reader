@@ -1,3 +1,10 @@
 body {
     font-family: helvetica, sans-serif;
 }
+.header {
+    text-align: center;
+}
+
+.header .subtitle {
+    font-style: italic;
+}
