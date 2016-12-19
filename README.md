@@ -20,9 +20,10 @@ It is created mainly as an educational project.
 - Better toolbar
 - Add Markdown-it plugins
 - URL Protocol?
+- Preferences pannel
 
 ## Examples
 
 Select or paste this file into Markdown Reader to test the program.
 
-[ a^2 + b^2 = c^2 ]
+$$ a^2 + b^2 = c^2 $$
