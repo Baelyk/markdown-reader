@@ -1,10 +1,16 @@
 {
-    "name": "Markdown-Reader",
-    "productName": "Markdown Reader",
-    "version": "0.1.0",
-    "description": "A minimal Markdown viewer",
-    "scripts": {
-        "start": "electron ."
-    },
-    "main": "main.js"
+  "name": "Markdown-Reader",
+  "productName": "Markdown Reader",
+  "version": "0.1.0",
+  "description": "A minimal Markdown viewer",
+  "scripts": {
+    "start": "electron ."
+  },
+  "main": "main.js",
+  "dependencies": {
+    "markdown-it": "^8.2.2",
+    "child_process": "^1.0.2",
+    "fs-jetpack": "^0.10.5",
+    "mathjax-electron": "^1.2.0"
+  }
 }

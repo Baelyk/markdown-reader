@@ -22,7 +22,7 @@ const {
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow
+let splashScreen
 let cat
 
 let menuPlate = [{
@@ -103,6 +103,70 @@ let menuPlate = [{
         role: "delete"
     }, {
         role: "selectall"
+    }]
+}, {
+    label: "Format",
+    submenu: [{
+        label: "Font",
+        submenu: [{
+            label: "Bold",
+            click: function(item, win, event) {
+                win.webContents.send("format", "bold")
+            },
+            accelerator: "CommandOrControl+B"
+        }, {
+            label: "Italics",
+            click: function(item, win, event) {
+                win.webContents.send("format", "italics")
+            },
+            accelerator: "CommandOrControl+I"
+        }, {
+            label: "Strikethrough",
+            click: function(item, win, event) {
+                win.webContents.send("format", "strikethrough")
+            }
+        }, {
+            type: "separator"
+        }, {
+            label: "Header",
+            submenu: [{
+                label: "Header 1",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header1")
+                },
+                accelerator: "CommandOrControl+1"
+            }, {
+                label: "Header 2",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header2")
+                },
+                accelerator: "CommandOrControl+2"
+            }, {
+                label: "Header 3",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header3")
+                },
+                accelerator: "CommandOrControl+3"
+            }, {
+                label: "Header 4",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header4")
+                },
+                accelerator: "CommandOrControl+4"
+            }, {
+                label: "Header 5",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header5")
+                },
+                accelerator: "CommandOrControl+5"
+            }, {
+                label: "Header 6",
+                click: function(item, win, event) {
+                    win.webContents.send("format", "header6")
+                },
+                accelerator: "CommandOrControl+6"
+            }]
+        }]
     }]
 }, {
     label: "View",
@@ -215,31 +279,30 @@ if (process.platform === "darwin") {
     }]
 }
 
-function createWindow() {
+function createSplash() {
     // Create the browser window.
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600
+    splashScreen = new BrowserWindow({
+        width: 300,
+        height: 400,
+        titleBarStyle: 'hidden'
     })
 
     // and load the index.html of the app.
-    mainWindow.loadURL(url.format({
+    splashScreen.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
     }))
 
-    return mainWindow
-
     // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
+    // splashScreen.webContents.openDevTools()
 
     // Emitted when the window is closed.
-    mainWindow.on('closed', function() {
+    splashScreen.on('closed', function() {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        mainWindow = null
+        splashScreen = null
     })
 }
 
@@ -273,7 +336,7 @@ function markdownify(markdown) {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.on('ready', function() {
-        createWindow()
+        createSplash()
         Menu.setApplicationMenu(Menu.buildFromTemplate(menuPlate))
     })
     // Quit when all windows are closed.
@@ -288,8 +351,8 @@ app.on('window-all-closed', function() {
 app.on('activate', function() {
     // On OS X it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (mainWindow === null) {
-        createWindow()
+    if (splashScreen === null) {
+        createSplash()
     }
 })
 
@@ -417,4 +480,11 @@ app.on('ready', function() {
         // console.log("Error")
         if (error) console.error(error)
     })
+})
+
+ipc.on("get-info", function (event) {
+    const version = app.getVersion()
+    console.log(version)
+    event.sender.openDevTools();
+    event.sender.send("info", version)
 })

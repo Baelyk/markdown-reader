@@ -1,10 +1,21 @@
 body {
     font-family: helvetica, sans-serif;
+    -webkit-user-select: none;
 }
+
+kbd {
+    background-color: #e6e6e6;
+    font-family: monospace;
+}
+
 .header {
     text-align: center;
 }
 
 .header .subtitle {
     font-style: italic;
+}
+
+.info {
+    text-align: center;
 }

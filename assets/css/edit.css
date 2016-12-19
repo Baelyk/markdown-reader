@@ -56,13 +56,26 @@ body {
     padding: 15px;
 }
 
-.edit {
+.edit-menu {
     position: absolute;
     top: 115px;
     left: 0px;
+
+    background-color: white;
+
+    height: 20px;
+    width: 97%;
+    border-radius: 10px;
+    padding: 2.5px 1.5% 2.5px 1.5%;
+}
+
+.edit {
+    position: absolute;
+    top: 140px;
+    left: 0px;
     text-align: center;
     margin: 0;
-    height: calc(100% - 115px);
+    height: calc(100% - 140px);
     width: 100%;
 }
 
